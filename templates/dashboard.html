@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>{{ greeting }}</p>
+<nav>
+    <ul>
+        <li><a href="{{ url_for('symptom_check') }}">Symptom Checker</a></li>
+        <li><a href="{{ url_for('doctor_consult') }}">Consult a Doctor</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+    </ul>
+</nav>
+{% endblock %}
