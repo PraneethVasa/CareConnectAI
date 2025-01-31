@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Symptom Checker</h2>
+<form method="POST">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+    <label for="symptoms">Symptoms (comma-separated):</label>
+    <input type="text" id="symptoms" name="symptoms" required>
+    <button type="submit">Analyze Symptoms</button>
+</form>
+
+{% if prediction %}
+<h3>Diagnosis: {{ prediction }}</h3>
+<h4>Precautions:</h4>
+<p>{{ precautions }}</p>
+{% endif %}
+{% endblock %}
