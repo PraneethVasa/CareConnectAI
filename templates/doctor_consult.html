@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Consult a Doctor</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Specialist</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doctor in doctors %}
+        <tr>
+            <td>{{ doctor.name }}</td>
+            <td>{{ doctor.specialist }}</td>
+            <td>{{ doctor.email }}</td>
+            <td>{{ doctor.mobile }}</td>
+            <td><a href="{{ url_for('consultation', doctor_id=doctor.id) }}">Consult</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
