@@ -39,3 +39,28 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Add this to your existing CSS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+iframe {
+    border: none;
+    margin-top: 20px;
+}
