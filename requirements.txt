@@ -1,0 +1,5 @@
+Flask
+google-generativeai
+joblib
+sqlite3
+gunicorn
